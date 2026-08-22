@@ -7,23 +7,23 @@
   <img src="https://img.shields.io/badge/Apache_Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" />
 </div>
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 Este projeto é uma API RESTful desenvolvida em **Java** com **Spring Boot** e banco de dados NoSQL **MongoDB**. O sistema simula o back-end de um blog, gerenciando usuários, postagens e comentários. O foco principal deste projeto é explorar o paradigma de banco de dados orientado a documentos, compreendendo as diferenças entre bancos de dados relacionais e não-relacionais, e como estruturar dados aninhados (embedded) e referenciados (references) no MongoDB.
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * **Backend:** Java, Spring Boot, Spring MVC
 * **Persistência de Dados:** Spring Data MongoDB
 * **Banco de Dados:** MongoDB
 * **Gerenciador de Dependências:** Maven
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 * **Gerenciamento de Usuários:** Operações completas de CRUD (Create, Read, Update, Delete) para usuários.
 * **Consulta de Postagens:** Busca de posts por ID, além de buscas avançadas.
 * **Busca Simples e Avançada:** Pesquisa de postagens por título e uma busca completa por textos contidos no título, corpo do post ou nos comentários, filtrando também por intervalo de datas.
 * **Associações:** Gerenciamento do relacionamento entre objetos de domínio utilizando aninhamento de objetos (para comentários e autores) e referências de banco de dados (`@DBRef` para associar as postagens aos usuários).
 * **Tratamento de Exceções:** Retorno adequado de erros e códigos HTTP padronizados (ex: 404 Not Found) em toda a API através de um manipulador de exceções (`ResourceExceptionHandler`).
 
-## 🗂️ Estrutura da Aplicação
+## Estrutura da Aplicação
 A aplicação segue a separação em camadas bem definidas e o uso do padrão DTO (Data Transfer Object):
 * `resources`: Controladores REST (Controllers) responsáveis por expor as rotas da API e lidar com as requisições HTTP e DTOs.
 * `services`: Contém a lógica de negócio da aplicação.
@@ -31,7 +31,7 @@ A aplicação segue a separação em camadas bem definidas e o uso do padrão DT
 * `domain`: Classes de entidade que representam as coleções e os dados persistidos no MongoDB (`User`, `Post`).
 * `dto`: Objetos de transferência de dados que definem os dados que trafegam nas requisições sem expor diretamente o domínio.
 
-## 🔧 Como Executar Localmente
+## Como Executar Localmente
 
 ### 1. Banco de Dados MongoDB
 Certifique-se de que possui o MongoDB rodando localmente (normalmente na porta `27017`). A aplicação já está configurada para conectar na base de dados local na porta padrão (`application.properties`). O banco de dados se chamará `workshopmongo`.
